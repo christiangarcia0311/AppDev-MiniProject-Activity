@@ -51,4 +51,17 @@ export const routes: Routes = [
     path: 'campuses',
     loadComponent: () => import('./pages/campuses/campuses.page').then( m => m.CampusesPage)
   },
+  {
+    path: 'campuses/delcarmen',
+    loadComponent: () => import('./pages/campuses/delcarmen/delcarmen.page').then( m => m.DelcarmenPage)
+  },
+  {
+    path: 'campuses/mainit',
+    loadComponent: () => import('./pages/campuses/mainit/mainit.page').then( m => m.MainitPage)
+  },
+  {
+    path: 'campuses/malimono',
+    loadComponent: () => import('./pages/campuses/malimono/malimono.page').then( m => m.MalimonoPage)
+  },
+
 ];

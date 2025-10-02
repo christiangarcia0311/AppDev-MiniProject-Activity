@@ -1,20 +1,66 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
-
+import { Component } from '@angular/core';
+import {
+  IonContent,
+  IonHeader,
+  IonIcon,
+  IonItem,
+  IonLabel,
+  IonList,
+  IonToolbar,
+  IonTitle,
+  IonButtons,
+  IonMenuButton,
+  IonBackButton,
+  IonCardTitle,
+  IonCardHeader,
+  IonCardContent,
+  IonImg,
+  IonCard,
+} from '@ionic/angular/standalone';
+import { addIcons } from 'ionicons';
+import {
+  documentTextOutline,
+  peopleOutline,
+  bookOutline,
+  schoolOutline,
+  businessOutline,
+  podiumOutline,
+} from 'ionicons/icons';
 @Component({
   selector: 'app-rie',
   templateUrl: './rie.page.html',
   styleUrls: ['./rie.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [
+    IonCard,
+    IonImg,
+    IonCardTitle,
+    IonContent,
+    IonHeader,
+    IonIcon,
+    IonItem,
+    IonLabel,
+    IonList,
+    IonToolbar,
+    IonTitle,
+    IonButtons,
+    IonMenuButton,
+    IonBackButton,
+    IonCardHeader,
+    IonCardTitle,
+    IonCardContent,
+  ],
 })
-export class RiePage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+export class RiePage {
+  icons = {
+    journal: documentTextOutline,
+    research: bookOutline,
+    manual: schoolOutline,
+    milestone: businessOutline,
+    cmd: podiumOutline,
+    extension: peopleOutline,
+  };
+  constructor() {
+    addIcons(this.icons);
   }
-
 }
