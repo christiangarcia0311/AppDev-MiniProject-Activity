@@ -1,20 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
-
+import { RouterModule } from '@angular/router';
+import {
+  flagOutline,
+  saveOutline,
+  receiptOutline,
+  musicalNotesOutline,
+  locationOutline,
+} from 'ionicons/icons';
 @Component({
   selector: 'app-the-school',
+  standalone: true,
+  imports: [IonicModule, CommonModule, RouterModule],
   templateUrl: './the-school.page.html',
   styleUrls: ['./the-school.page.scss'],
-  standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
-export class TheSchoolPage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class TheSchoolPage {
+  icons = {
+    flagOutline,
+    saveOutline,
+    receiptOutline,
+    musicalNotesOutline,
+    locationOutline,
+  }; // ✅Define icons
 }
