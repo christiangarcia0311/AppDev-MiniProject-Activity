@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/home',
+    redirectTo: 'home',
     pathMatch: 'full',
   },
   {
@@ -63,5 +63,18 @@ export const routes: Routes = [
     path: 'campuses/malimono',
     loadComponent: () => import('./pages/campuses/malimono/malimono.page').then( m => m.MalimonoPage)
   },
+  {
+    path: 'alumni/association',
+    loadComponent: () => import('./pages/alumni/association/association.page').then( m => m.AssociationPage)
+  },
+  {
+    path: 'alumni/events',
+    loadComponent: () => import('./pages/alumni/events/events.page').then( m => m.EventsPage)
+  },
+  {
+    path: 'alumni/directory',
+    loadComponent: () => import('./pages/alumni/directory/directory.page').then( m => m.DirectoryPage)
+  },
+
 
 ];
